@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<link rel="stylesheet" href="style-index.css">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UCC Capital: cotizaciones en vivo</title>
+    <script type="text/javascript" src="canvas-ppal.js"></script>
+    <link rel= "icon" href="Imagenes/logo-menor.ico">
+</head>
+
+<body onload="setInterval(caidaMoneda,60)">
+    <main>
+        <div class="ppal"> <!-- Contenedor principal -->
+            <canvas id="myCanvas" class="coindrop" width="1400px" height="620px">
+                Tu navegador no soporta el tag de HTML5 canvas.
+            </canvas> <!-- Canvas de la moneda -->
+            <div class="IniciarSesion"> <!-- Logo y titulo de la pagina -->
+                <img src="Imagenes/logo-grande.png" class="img-01" alt="Logo de UCC Capital">
+            </div>
+            <div class="acceso"> <!-- Formulario de acceso -->
+                <h2>Iniciar sesion</h2>
+                <form action="cotizaciones.html">
+                    <div class="usuario">
+                        <label for="usuario">Email</label>
+                        <input type="text" name="usuario" id="usuario" placeholder="Ingresá tu email" required>
+                    </div>
+                    <div class="password">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="contrasena" placeholder="Password" required>
+                    </div>
+                    <div class="submit">
+                        <input type="submit" value="Ingresar">
+                    </div>
+                </form>
+            </div>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<link rel="stylesheet" href="style-cotizaciones.css">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cotizaciones</title>
+    <link rel= "icon" href="Imagenes/logo-menor.ico">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Cotizaciones</h1>
+        <img src="Imagenes/logo-menor.png" class="img-01" alt="Logo de UCC Capital">
+    </div>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Cerrar Sesion</a></li>
+            <li><a href="wallet.html">Wallet</a></li>
+            <li><a href="streaming.html">Streaming</a></li>
+            <li class="selected"><a href="cotizaciones.html">Cotizaciones</a></li>
+        </ul>
+    </nav>
+    <div>
+        <h1>Dolar en Argentina:</h1>
+        <div id="dolar"></div>
+        <script src="api-dolar.js"></script>
+    </div>
+</body>
+
+</html>

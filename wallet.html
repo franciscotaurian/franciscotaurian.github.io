@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<link rel="stylesheet" href="style-wallet.css">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <link rel= "icon" href="Imagenes/logo-menor.ico">
+  <title>Wallet</title>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Wallet</h1>
+    <img src="Imagenes/logo-menor.png" class="img-01" alt="Logo de UCC Capital">
+  </div>
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">Cerrar Sesion</a></li>
+      <li class="selected"><a href="wallet.html">Wallet</a></li>
+      <li><a href="streaming.html">Streaming</a></li>
+      <li><a href="cotizaciones.html">Cotizaciones</a></li>
+    </ul>
+  </nav>
+    <div class="card">
+      <div class="credit-card-box">
+        <div class="flip">
+          <div class="front">
+            <div class="chip"></div>
+            <div class="logo">
+              <div class="logo-visa"></div>
+              <img class="logo-contacless" src="Imagenes/contactless.png"></img>
+            </div>
+            <div class="number"></div>
+            <div class="titular-tarj">
+              <label>Nombre del Titular</label>
+              <div></div>
+            </div>
+            <div class="card-expiration-date">
+              <label>Fecha de Expiración</label>
+              <div></div>
+            </div>
+          </div>
+          <div class="back">
+            <div class="strip"></div>
+            <div class="logo">
+              <img class="logo-uccfinance" src="Imagenes/logo-menor.png"></img>
+            </div>
+            <div class="cvv">
+              <label>CVV</label>
+              <div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <form class="form" id="formulario" autocomplete="off" novalidate>
+        <fieldset>
+          <label for="num-tarj">Numero de Tarjeta</label>
+          <input type="num" id="num-tarj-1" class="input-numero-tarj" maxlength="4" required />
+          <input type="num" id="num-tarj-2" class="input-numero-tarj" maxlength="4" required />
+          <input type="num" id="num-tarj-3" class="input-numero-tarj" maxlength="4" required />
+          <input type="num" id="num-tarj-4" class="input-numero-tarj" maxlength="4" required />
+        </fieldset>
+        <fieldset>
+          <label for="titular-tarj">Nombre del Titular</label>
+          <input type="text" id="titular-tarj" required />
+        </fieldset>
+        <fieldset class="fieldset-expiration">
+          <label for="card-expiration-month">Fecha de Expiracion</label>
+          <div class="select">
+            <select id="card-expiration-month" required>
+              <option></option>
+              <option>01</option>
+              <option>02</option>
+              <option>03</option>
+              <option>04</option>
+              <option>05</option>
+              <option>06</option>
+              <option>07</option>
+              <option>08</option>
+              <option>09</option>
+              <option>10</option>
+              <option>11</option>
+              <option>12</option>
+            </select>
+          </div>
+          <div class="select">
+            <select id="card-expiration-year" required>
+              <option></option>
+              <option>2024</option>
+              <option>2025</option>
+              <option>2026</option>
+              <option>2027</option>
+              <option>2028</option>
+              <option>2029</option>
+              <option>2030</option>
+              <option>2031</option>
+              <option>2032</option>
+              <option>2033</option>
+            </select>
+          </div>
+        </fieldset>
+        <fieldset class="fieldset-cvv">
+          <label for="card-cvv">CVV</label>
+          <input type="text" id="card-cvv" maxlength="3" required />
+        </fieldset>
+        <button class="btn" id="btn-add">Agregar</button>
+      </form>
+    </div>
+    <script src="api-tarjeta.js"></script>
+  </div>
+  </div>
+</body>
+
+</html>

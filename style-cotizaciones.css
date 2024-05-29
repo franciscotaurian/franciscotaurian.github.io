@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins';
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;
+    background-color: #161616;
+    height: 100vh;
+
+}
+
+main {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+h1 {
+    color: #0c6ca5;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.container .img-01 {
+    position: absolute;
+    left: 1vw;
+    width: 5vw;
+    height: 8vh;
+    filter: invert(24%) sepia(100%) saturate(1612%) hue-rotate(182deg) brightness(92%) contrast(91%);
+}
+
+.container h1 {
+    color: #0c6ca5;
+    text-align: center;
+}
+
+.navbar li.selected {
+    color: #0c6ca5;
+}
+
+li.selected a {
+    color: #0c6ca5;
+
+}
+
+.navbar ul {
+    list-style-type: none;
+    background-color: #161616;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+    font-size: 1.5vmax;
+}
+
+.navbar a {
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+}
+
+.navbar a:hover {
+    color: #104A77;
+}
+
+.navbar li {
+    float: right;
+}
+
+.boxBack1{
+    position: absolute;
+    background-color: #FFFFFF;
+    margin-left: 1vw;
+    margin-top: 8vh;
+    width: 31.8vw;
+    height: 29vh;
+    z-index: -1;
+
+}
+
+#dolar {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    /* Permite que los elementos hijos se envuelvan en múltiples líneas si no caben en una sola fila.*/
+    justify-content: center;
+    /*Centra horizontalmente los elementos hijos dentro del contenedor flex.*/
+}
+
+.currency-box {
+    height: 10vm;
+    background-color: rgba(16, 16, 16, 0.8);
+    border: 3px solid #0c6ca5;
+    /* Borde azul claro */
+    border-radius: 12px;
+    color: #ffffff;
+    /* Texto blanco */
+    padding: 5px;
+    /*distancia al borde del cuadro */
+    margin: 10px;
+    /*distancia entre cuadros*/
+    text-align: center;
+    width: calc(33.33% - 25px);
+    /* Ancho para 3 cuadros en una fila */
+    box-sizing: border-box;
+    /* Incluye el padding en el ancho */
+    box-shadow: 16px 16px 8px #0000008c;
+}
+
+.currency-box h2 {
+    margin-top: 7px;
+    font-size: 2.9vw;
+    color: #ffffff;
+    /* Texto blanco */
+    margin-bottom: 20px;
+}
+
+.values {
+    font-size: 1.7vw;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 15px;
+}
+
+.value-item {
+    /* Fondo gris oscuro */
+    padding: 5px;
+}
