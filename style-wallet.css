@@ -14,6 +14,7 @@
 	font-family: 'poppins';
 }
 
+
 body {
 	margin: 0;
 	padding: 0;
@@ -22,6 +23,11 @@ body {
 	width: 100%;
 }
 
+.wrapper-grid {
+	display:grid;
+	grid-template-columns: repeat(auto-fit, 40rem); 
+
+}
 main {
 	padding-left: 100%;
 	padding-right: 100%;
@@ -118,6 +124,9 @@ li.selected a {
 }
 
 html,
+
+
+
 .card {
 	margin-top: 20px;
 	font-family: 'Poppins';
@@ -177,6 +186,7 @@ html,
 	padding: 10px 0;
 	position: relative;
 	clear: both;
+	margin-top: 7vh;
 }
 
 .form fieldset.fieldset-expiration {
@@ -298,6 +308,8 @@ input.input-cart-number: Se refiere a elementos de entrada (<input>) que tienen 
 	width: 370px;
 	height: 280px;
 	transform: translateX(-40%);
+	margin-right: -30vw;
+	margin-top: 10vh;
 }
 
 .credit-card-box:hover .flip,
@@ -473,42 +485,29 @@ input.input-cart-number: Se refiere a elementos de entrada (<input>) que tienen 
 
 /*En nuestro codigo CSS, @media se utiliza para definir estilos específicos según las características de la pantalla del dispositivo donde se está visualizando la página.*/
 
-@media only screen and (max-width: 1400px) and (min-width: 770px) {
-	.checkout {
-		width: 65%;
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 600px) {
+	.container{
+		width: 120vw;
 	}
+  .card{
+	width: 20px;
+  }
+  .card .credit-card-box{
+	margin-left: 80px;
+  }
+  .form {
+    width: 100vw; /* Ocupa todo el ancho en pantallas pequeñas */
+	margin-left: 50px;
+  }
+  .navbar{
+	width: 120vw;
+	list-style-type: none;
+	background-color: #161616;
+	padding: 0px;
+	margin: 0px;
+	overflow: hidden;
+}
 }
 
-@media (max-width: 769px) {
-
-	html,
-	body {
-		height: auto;
-	}
-
-	.checkout {
-		display: block;
-		width: 95%;
-		padding: 20px 15px 20px;
-	}
-
-	.credit-card-box {
-		width: 60vw;
-		transform: unset;
-		margin: 0 auto;
-	}
-
-	.credit-card-box .front,
-	.credit-card-box .back {
-		width: 100%;
-	}
-
-	.credit-card-box .number {
-		font-size: 30px;
-	}
-
-	.form fieldset input.input-numero-tarj,
-	.form fieldset .select.input-numero-tarj {
-		width: 2vw;
-	}
-}

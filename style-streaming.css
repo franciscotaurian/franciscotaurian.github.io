@@ -289,7 +289,7 @@ body {
     padding: 0;
     margin-top: 20px;
     background-color: #161616;
-    height: 100vh;
+    height: 0px;
 }
 
 main {
@@ -376,11 +376,12 @@ ul {
     /* Para alinear las cajas al inicio del contenedor */
     justify-content: center;
     position: relative;
+    margin-left: -50px;
 }
 
 .tarjeta {
     position: relative;
-    height: 170px;
+    height: 200px;
     width: 160px;
     background-color: rgba(16, 16, 16, 0.8);
     /* Fondo semi-transparente */
@@ -477,14 +478,14 @@ ul {
     color: #fff;
     margin-left: 3vw;
     /* Ajusta la distancia desde la izquierda según sea necesario */
-    width:  100px;
+    width:  150px;
     height: 70px;
     font-size: 10px;
-    margin-top: -75px;
+    margin-top: -98px;
 }
 
 .tarjeta ul {
-    margin-top:0px;
+    margin-top:30px;
     /* Ajusta la distancia desde arriba según sea necesario */
     margin-left: 2vw;
     background-color: #00000000;
