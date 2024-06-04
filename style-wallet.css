@@ -312,10 +312,6 @@ input.input-cart-number: Se refiere a elementos de entrada (<input>) que tienen 
 	margin-top: 10vh;
 }
 
-.credit-card-box:hover .flip,
-.credit-card-box.hover .flip {
-	transform: rotateY(180deg);
-}
 
 .credit-card-box .front,
 .credit-card-box .back {
@@ -335,11 +331,7 @@ input.input-cart-number: Se refiere a elementos de entrada (<input>) que tienen 
 }
 
 /* la transicion de dar vuelta la tarjeta, tamb puedo elegir si será rapido o lento*/
-.credit-card-box .flip {
-	transition: 0.8s;
-	transform-style: preserve-3d;
-	position: relative;
-}
+
 
 /* Es el logo de visa negro de arriba  . Determinamos la posición*/
 .credit-card-box .logo {
@@ -349,14 +341,7 @@ input.input-cart-number: Se refiere a elementos de entrada (<input>) que tienen 
 	width: 60px;
 }
 
-.credit-card-box .front {
-	z-index: 2;
-	transform: rotateY(0deg);
-}
 
-.credit-card-box .back {
-	transform: rotateY(180deg);
-}
 
 /*Ubicación de nuestro logo personal*/
 /*mientras mas grande top: x px, estará mas abajo*/
@@ -487,18 +472,16 @@ input.input-cart-number: Se refiere a elementos de entrada (<input>) que tienen 
 
 
 /* Media query para pantallas pequeñas */
-@media (max-width: 600px) {
+@media (max-width: 599px) {
 	.container{
 		width: 120vw;
 	}
   .card{
 	width: 20px;
-  }
-  .card .credit-card-box{
-	margin-left: 80px;
+	margin-left: 110px;
   }
   .form {
-    width: 100vw; /* Ocupa todo el ancho en pantallas pequeñas */
+    width: 90vw; /* Ocupa todo el ancho en pantallas pequeñas */
 	margin-left: 50px;
   }
   .navbar{
@@ -510,4 +493,25 @@ input.input-cart-number: Se refiere a elementos de entrada (<input>) que tienen 
 	overflow: hidden;
 }
 }
+
+@media (min-width: 600px){
+.credit-card-box .flip {
+	transition: 0.8s;
+	transform-style: preserve-3d;
+	position: relative;
+}
+.credit-card-box .front {
+	z-index: 2;
+	transform: rotateY(0deg);
+}
+}
+
+.credit-card-box .back {
+	transform: rotateY(180deg);
+}
+		
+.credit-card-box:hover .flip {
+		  transform: rotateY(180deg);
+		}
+	  
 

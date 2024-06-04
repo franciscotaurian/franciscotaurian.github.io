@@ -7,10 +7,16 @@ document.addEventListener('DOMContentLoaded', function () { // se asegura que el
             const numTarj3 = JSON.parse(localStorage.getItem('num-tarj-3'));
             const numTarj4 = JSON.parse(localStorage.getItem('num-tarj-4'));
             const numTarj = `${numTarj1} ${numTarj2} ${numTarj3} ${numTarj4}`;
-            if (confirm(`¿Desea confirmar la compra? El numero de tarjeta con el que confirmara la compra es: ${numTarj}`)) {//ejecuta una funcion confirm.
-                alert('Compra confirmada. ¡Disfrute del servicio!');
-            } else {
-                alert('Compra cancelada.');
+
+            if (numTarj1 == null && numTarj2 == null && numTarj3 == null && numTarj4==null) {
+                alert('Debe ingresar una tarjeta para poder realizar la compra');
+            }
+            else {
+                if (confirm(`¿Desea confirmar la compra? El numero de tarjeta con el que confirmara la compra es: ${numTarj}`)) {//ejecuta una funcion confirm.
+                    alert('Compra confirmada. ¡Disfrute del servicio!');
+                } else {
+                    alert('Compra cancelada.');
+                }
             }
         });
     });
