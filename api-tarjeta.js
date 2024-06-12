@@ -18,6 +18,12 @@ if (addCardButton) {
 
 		console.log(num_tarj, num_tarj_1, num_tarj_2, num_tarj_3, titular_tarj, card_expiration_month, card_expiration_year, card_cvv); // Para depurar
 
+		if (condition) {
+			
+		} else {
+			
+		}
+
 		localStorage.setItem('num-tarj-1', JSON.stringify(num_tarj));
 		localStorage.setItem('num-tarj-2', JSON.stringify(num_tarj_1));
 		localStorage.setItem('num-tarj-3', JSON.stringify(num_tarj_2));

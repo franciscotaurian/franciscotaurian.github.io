@@ -100,7 +100,7 @@ li.selected a {
 }
 
 .currency-box {
-    height: 10vm;
+    height: 160px;
     background-color: rgba(16, 16, 16, 0.8);
     border: 3px solid #0c6ca5;
     /* Borde azul claro */
@@ -140,33 +140,24 @@ li.selected a {
 
 @media (max-width: 599px) { 
     .currency-box {
-        height: 15vh;
-        background-color: rgba(16, 16, 16, 0.8);
-        border: 3px solid #0c6ca5;
-        /* Borde azul claro */
-        border-radius: 12px;
-        color: #ffffff;
-        /* Texto blanco */
+        height: 120px;
         padding: 5px;
         padding-top: 20px;
         /*distancia al borde del cuadro */
         margin: 10px;
-        /*distancia entre cuadros*/
-        text-align: center;
         width: calc(50% - 25px);
         /* Ancho para 3 cuadros en una fila */
-        box-sizing: border-box;
-        /* Incluye el padding en el ancho */
         box-shadow: 16px 16px 8px #0000008c;
     }
     .values {
-        font-size: 1.3vmax;
+        font-size: 1.7vmax;
         display: flex;
         justify-content: space-around;
         margin-bottom: 15px;
     }
     .currency-box h2 {
         margin-bottom: 10px;
+        font-size: 15px;
     }
 
 
