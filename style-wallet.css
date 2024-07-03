@@ -14,6 +14,7 @@
 	font-family: 'poppins';
 }
 
+/*le aplico el fondo a toda la pagina. sera el fondo de la tarjeta y de los campos a rellenar, color negro*/
 
 body {
 	margin: 0;
@@ -24,27 +25,21 @@ body {
 }
 
 .wrapper-grid {
-	display:grid;
-	grid-template-columns: repeat(auto-fit, 40rem); 
+	/* Con esto pasamos el formulario hacia abajo, cuando achicamos la pagina (responsive) */
+	display: grid;
+	/*organizar los elementos dentro de este contenedor usando el sistema de cuadrícula de CSS Grid.*/
 
-}
-main {
-	padding-left: 100%;
-	padding-right: 100%;
-	padding-top: 100px;
-	padding-bottom: 100px;
-}
-
-.container {
-	display: flex;
-	justify-content: center;
-	position: relative;
+	grid-template-columns: repeat(auto-fit, 40rem);
+	/* Aquí se define cómo se comportarán las columnas dentro de la cuadrícula. 
+	repeat(auto-fit, 40rem) indica que se repetirán columnas de 40 rem (aprox 640 pixeles) hasta que llenen el ancho disponible
+	 de manera flexible. Asi creamos un diseño responsive donde los elementos se ajustan automáticamente al tamaño del contenedor
+	  y se acomodan en filas y columnas según el espacio disponible. */
 }
 
-.img-01 {
-	filter: invert(31%) sepia(62%) saturate(1308%) hue-rotate(172deg) brightness(92%) contrast(93%);
-}
 
+
+
+/*imagen del logo UCC.Capital */
 .container .img-01 {
 	position: absolute;
 	left: 10px;
@@ -53,11 +48,13 @@ main {
 	filter: invert(24%) sepia(100%) saturate(1612%) hue-rotate(182deg) brightness(92%) contrast(91%);
 }
 
+/*Titulo página wallet*/
 .container h1 {
 	color: #0c6ca5;
 	text-align: center;
 }
 
+/*Estilos para cuando seleccionamos una opcion de la navbar*/
 .navbar li.selected {
 	color: #0c6ca5;
 }
@@ -91,50 +88,17 @@ li.selected a {
 }
 
 
-/* Estilos para el cuerpo principal de la página */
-#add-card {
-	background-color: #161616;
-	/* Cambia esto al color de fondo que estás usando */
-	border: 2px solid #0c6ca5;
-	/* Cambia esto al color de borde que estás usando */
-	color: white;
-	/* Cambia esto al color de texto que estás usando */
-	padding: 7vh 7vw;
-	/* Ajusta esto al relleno que estás usando */
-	font-size: 2vmax;
-	/* Ajusta esto al tamaño de fuente que estás usando */
-	border-radius: 0.25rem;
-	/* Ajusta esto al radio de borde que estás usando */
-	transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-	/* Esto añade una transición suave al cambiar los estilos del botón */
-	margin-top: 20vh; 
-	margin-left: 35vw;
-}
-
-#add-card:hover {
-	background-color: #e9ecef;
-	/* Cambia esto al color de fondo que estás usando para el estado hover */
-	border-color: #dae0e5;
-	/* Cambia esto al color de borde que estás usando para el estado hover */
-}
-
-.add-card .card {
-	display: none;
-	/* Ocultar el cuerpo de la página y la tarjeta de crédito por defecto */
-}
-
 html,
-
-
-
 .card {
 	margin-top: 20px;
 	font-family: 'Poppins';
 	/* Fuente principal */
 	display: flex;
-	/* Uso de Flexbox para centrar verticalmente el contenido */
+	/* Convierte al elemento .card en un contenedor flexible, lo cual es útil para organizar elementos internos con flexbox.*/
 	justify-content: center;
 	align-items: center;
+	/*Centrar la Tarjeta. Reglas de estilo se están aplicando a elementos específicos del HTML.
+	 En este caso, la clase .card en el CSS está diseñada para aplicarse a elementos HTML que tienen la clase card*/
 }
 
 /* Estilos para botones */
@@ -180,27 +144,32 @@ html,
 	/* Sombra en hover */
 }
 
+/* le saco los bordes a los campos para rellenar los datos y los separo*/
 .form fieldset {
 	border: none;
 	padding: 0;
 	padding: 10px 0;
 	position: relative;
 	clear: both;
+	/* Limpiar flotadores, para evitar solapamiento de contenidos */
 	margin-top: 7vh;
 }
 
 .form fieldset.fieldset-expiration {
+	/* Establecer el ancho de los campos de entrada de la fecha de vencimiento */
 	float: left;
 	width: 60%;
 }
 
 .form fieldset.fieldset-expiration .select {
+	/* Establecer el ancho de los campos de entrada de la fecha de vencimiento */
 	width: 70px;
 	margin-right: 12px;
 	float: left;
 }
 
 .form fieldset.fieldset-cvv {
+	/* Establecer el ancho de los campos de entrada del CVV */
 	clear: none;
 	float: right;
 	width: 86px;
@@ -232,18 +201,21 @@ html,
 }
 
 /* Estos selectores CSS se aplican a dos tipos de elementos dentro de un <fieldset> que tienen clases específicas:
-
-input.input-cart-number: Se refiere a elementos de entrada (<input>) que tienen la clase input-cart-number.
-.select.input-cart-number: Se refiere a elementos de tipo "select" que tienen la clase input-cart-number.*/
+input.input-numero-tarj: Se refiere a elementos de entrada (<input>) que tienen la clase input-numero-tarj.
+.select.input-numero-tarj: Se refiere a elementos de tipo "select" que tienen la clase input-numero-tarj. */
 .form fieldset input.input-numero-tarj,
 .form fieldset .select.input-numero-tarj {
 	width: 50px;
 	display: inline-block;
+	/* Alinea los elementos en línea */
 	margin-right: 8px;
 	background: transparent;
 }
 
+/* le da un largo determinado con un margen determinado a la derecha para generar la separacion al campo para ingresar num tarjeta*/
+
 .form fieldset input.input-numero-tarj:last-child,
+/* Establecer el margen derecho del último elemento de entrada */
 .form fieldset .select.input-numero-tarj:last-child {
 	margin-right: 0;
 }
@@ -253,8 +225,7 @@ input.input-cart-number: Se refiere a elementos de entrada (<input>) que tienen 
 	position: relative;
 }
 
-/* se encargan de aplicar estilos específicos a elementos de entrada y selección dentro de un formulario, asegurando su apariencia y disposición adecuadas en la página.
-*/
+/* las flechas se ajustan a los campos en "fecha de expiración"*/
 
 /* el boton para seleccionar opciones y su ubicacion*/
 .form fieldset .select::after {
@@ -271,14 +242,20 @@ input.input-cart-number: Se refiere a elementos de entrada (<input>) que tienen 
 
 
 .form fieldset .select select {
+	/* Webkit es para Safari, Chrome y Opera*/
+	/* Moz es para Firefox */
+	/* Usamos ambos, para la compatibilidad con diferentes navegadores */
 	-webkit-appearance: none;
+	/*eliminar todos los estilos predeterminados que el navegador aplica a un elemento */
 	-moz-appearance: none;
+	/*eliminar todos los estilos predeterminados que el navegador aplica a un elemento */
 	appearance: none;
 	position: absolute;
 	padding: 0;
 	border: none;
 	width: 100%;
 	outline: none !important;
+	/* Evitar el resaltado del borde en el enfoque generado por los navegadores */
 	top: 6px;
 	left: 6px;
 	background: none;
@@ -286,22 +263,20 @@ input.input-cart-number: Se refiere a elementos de entrada (<input>) que tienen 
 	color: #0c6ca5;
 }
 
+/*establecemos como sera el boton de AGREGAR TARJETA*/
 .form button {
-	width: 100%;
+	width: 60%;
 	outline: none !important;
+	/* Evitar el resaltado del borde en el enfoque generado por los navegadores */
 	background: linear-gradient(135deg, #230524, #0c6ca5);
 	text-transform: uppercase;
 	font-weight: bold;
 	border: none;
 	box-shadow: none;
-	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-	margin-top: 90px;
 	cursor: pointer;
+	/* Cambiar el cursor a una "mano" al pasar sobre el botón */
 }
 
-.form button .fa {
-	margin-right: 6px;
-}
 
 .credit-card-box {
 	perspective: 1000;
@@ -312,14 +287,15 @@ input.input-cart-number: Se refiere a elementos de entrada (<input>) que tienen 
 	margin-top: 10vh;
 }
 
-
 .credit-card-box .front,
 .credit-card-box .back {
 	width: 400px;
 	height: 250px;
 	border-radius: 15px;
 	-webkit-backface-visibility: hidden;
+	/* Ocultar la cara trasera en navegadores webkit */
 	backface-visibility: hidden;
+	/* Ocultar la cara trasera en navegadores por defecto */
 	background-image: url('https://media.istockphoto.com/id/897189176/photo/defocused-background.webp?b=1&s=170667a&w=0&k=20&c=JqCY-fHDh0qVVQfG3N6a6jmuYegiXi-grDuR4z_ihGk=');
 	/* Imagen de fondo */
 	position: absolute;
@@ -332,7 +308,6 @@ input.input-cart-number: Se refiere a elementos de entrada (<input>) que tienen 
 
 /* la transicion de dar vuelta la tarjeta, tamb puedo elegir si será rapido o lento*/
 
-
 /* Es el logo de visa negro de arriba  . Determinamos la posición*/
 .credit-card-box .logo {
 	position: absolute;
@@ -340,8 +315,6 @@ input.input-cart-number: Se refiere a elementos de entrada (<input>) que tienen 
 	right: 30px;
 	width: 60px;
 }
-
-
 
 /*Ubicación de nuestro logo personal*/
 /*mientras mas grande top: x px, estará mas abajo*/
@@ -369,21 +342,6 @@ input.input-cart-number: Se refiere a elementos de entrada (<input>) que tienen 
 	left: -240px;
 }
 
-/*Es la SOMBRA del chip, sino, lo podría agregar en html desde el comienzo*/
-.credit-card-box .chip::before {
-	content: "";
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	margin: auto;
-	border: 4px solid rgba(175, 187, 64, 0.137);
-	width: 80%;
-	height: 70%;
-	border-radius: 5px;
-}
-
 /*La linea - PARTE DE ATRAS SUPERIOR*/
 .credit-card-box .strip {
 	background: linear-gradient(135deg, #272727d0, #000000);
@@ -402,11 +360,13 @@ input.input-cart-number: Se refiere a elementos de entrada (<input>) que tienen 
 	font-size: 30px;
 }
 
+/*El titulo de los campos los cuales relleno (nombre del titular y fecha de expiracion)*/
 .credit-card-box label {
 	font-size: 10px;
 	letter-spacing: 1px;
 	text-shadow: none;
 	text-transform: uppercase;
+	/* Cambiar el texto a mayúsculas */
 	font-weight: normal;
 	display: block;
 	margin-bottom: 3px;
@@ -420,6 +380,7 @@ input.input-cart-number: Se refiere a elementos de entrada (<input>) que tienen 
 	left: 19px;
 	font-size: 22px;
 	text-transform: capitalize;
+	/* Cambia la primer letra de cada palabra en mayúscula */
 }
 
 .credit-card-box .card-expiration-date {
@@ -473,45 +434,54 @@ input.input-cart-number: Se refiere a elementos de entrada (<input>) que tienen 
 
 /* Media query para pantallas pequeñas */
 @media (max-width: 599px) {
-	.container{
+	.container {
 		width: 120vw;
 	}
-  .card{
-	width: 20px;
-	margin-left: 110px;
-  }
-  .form {
-    width: 90vw; /* Ocupa todo el ancho en pantallas pequeñas */
-	margin-left: 50px;
-  }
-  .navbar{
-	width: 120vw;
-	list-style-type: none;
-	background-color: #161616;
-	padding: 0px;
-	margin: 0px;
-	overflow: hidden;
-}
+
+	.card {
+		width: 20px;
+		margin-left: 110px;
+	}
+
+	.form {
+		width: 90vw;
+		/* width: 90vw; en .form significa que el formulario ocupará el 90% del ancho de la ventana del navegador en pantallas pequeñas. */
+		/* Como habiamos dicho, al tener el formulario que se define dentro de este contenedor de cuadrícula flexible (wrapper-grid),
+	 	su tamaño y posición podrían ajustarse dinámicamente según el tamaño de la pantalla y el espacio disponible en la cuadrícula. (Como debe ocupar el 90% se va abajo buscando mas espacio)
+	 	se reorganiza automaticamente: el formulario se mueve hacia una nueva fila o posición en la cuadrícula, */
+		margin-left: 50px;
+	}
+
+	.navbar {
+		width: 120vw;
+		list-style-type: none;
+		background-color: #161616;
+		padding: 0px;
+		margin: 0px;
+		overflow: hidden;
+	}
 }
 
-@media (min-width: 600px){
-.credit-card-box .flip {
-	transition: 0.8s;
-	transform-style: preserve-3d;
-	position: relative;
-}
-.credit-card-box .front {
-	z-index: 2;
-	transform: rotateY(0deg);
-}
+@media (min-width: 600px) {
+	.credit-card-box .flip {
+		transition: 0.8s;
+		transform-style: preserve-3d;
+		/* Preservar la transformación 3D */
+		position: relative;
+	}
+
+	.credit-card-box .front {
+		/* Establecer la rotación de la tarjeta de crédito en 0 grados */
+		z-index: 2;
+		transform: rotateY(0deg);
+	}
 }
 
 .credit-card-box .back {
+	/* Establecer la rotación de la tarjeta de crédito en 180 grados */
 	transform: rotateY(180deg);
 }
-		
-.credit-card-box:hover .flip {
-		  transform: rotateY(180deg);
-		}
-	  
 
+.credit-card-box:hover .flip {
+	transform: rotateY(180deg);
+}

@@ -1,169 +1,72 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 * {
+    /* Selecciono todo los elementos del html */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'poppins';
 }
 
-@media (min-width: 600px) and (orientation: landscape){
-
-body {
-    margin: 0;
-    padding: 0;
-    background-color: #161616;
-}
-
-.ppal {
-    color: #0c6ca5;
-}
-
-#myCanvas {
-    position: absolute;
-    top: 0;
-    left: 20px;
-    z-index: -1;
-    /* Esto asegura que el canvas esté detrás de otros contenidos */
-}
-
-.acceso {
-    z-index: 1;
-    /* Esto asegura que el div acceso esté delante del canvas */
-}
-
-.IniciarSesion {
-    color: #0c6ca5;
-}
-
-.IniciarSesion h1 {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 50px;
-}
-
-.img-01 {
-    width: 150px;
-    height: 150px;
-    margin: auto;
-    display: block;
-    margin-top: 10px;
-    margin-bottom: 30px;
-    filter: invert(31%) sepia(62%) saturate(1308%) hue-rotate(172deg) brightness(92%) contrast(93%);
-}
-
-.acceso {
-    width: 600px;
-    height: 390px;
-    background: #161616;
-    margin: auto;
-    margin-top: 10px;
-    box-shadow: 7px 13px 37px #000;
-    padding: 20px 30px;
-    border-radius: 13px;
-}
-
-.acceso h2 {
-    margin: 0;
-    color: #0c6ca5;
-    margin-bottom: 30px;
-    text-align: left;
-    height: 40px;
-    font-size: 30px;
-}
-
-.usuario input {
-    color: white;
-    width: 100%;
-    border: 1px solid #0c6ca5;
-    margin-bottom: 40px;
-    padding: 11px 10px;
-    height: 40px;
-    background-color: #161616;
-    border-radius: 9px;
-}
-
-.password input {
-    color: white;
-    width: 100%;
-    border: 1px solid #0c6ca5;
-    margin-bottom: 60px;
-    padding: 11px 10px;
-    height: 40px;
-    background-color: #161616;
-    border-radius: 9px;
-}
-
-.submit input {
-    font-size: 18px;
-    width: 100%;
-    height: 50px;
-    margin-bottom: 40px;
-    border-radius: 12px;
-    background-color: #0c6ca5;
-    color: #161616;
-    border: none;
-}
-}
-
-@media(max-width: 599px){
+@media (min-width: 600px) and (orientation: landscape) {
+    /* Estilos para pantallas mayores a 600px en modo horizontal */
 
     body {
         margin: 0;
         padding: 0;
         background-color: #161616;
-        height: 100vh;
     }
-    
+
     .ppal {
-        height: 10vh;
         color: #0c6ca5;
     }
-    
+
     #myCanvas {
-        height: 100vh;
-        width: 45vh;
+        /* Estilos para el canvas */
         position: absolute;
         top: 0;
         left: 20px;
         z-index: -1;
         /* Esto asegura que el canvas esté detrás de otros contenidos */
     }
-    
+
     .acceso {
         z-index: 1;
         /* Esto asegura que el div acceso esté delante del canvas */
     }
-    
+
     .IniciarSesion {
         color: #0c6ca5;
     }
-    
+
     .IniciarSesion h1 {
         text-align: center;
         margin-top: 20px;
-        font-size: 40px;
+        font-size: 50px;
     }
-    
+
     .img-01 {
         width: 150px;
         height: 150px;
         margin: auto;
         display: block;
         margin-top: 10px;
-        margin-bottom: 110px;
+        margin-bottom: 30px;
         filter: invert(31%) sepia(62%) saturate(1308%) hue-rotate(172deg) brightness(92%) contrast(93%);
+        /* Filtro para cambiar el color de la imagen */
     }
-    
+
     .acceso {
-        width: 350px;
+        width: 600px;
         height: 390px;
         background: #161616;
         margin: auto;
+        margin-top: 10px;
         box-shadow: 7px 13px 37px #000;
         padding: 20px 30px;
         border-radius: 13px;
     }
-    
+
     .acceso h2 {
         margin: 0;
         color: #0c6ca5;
@@ -172,7 +75,7 @@ body {
         height: 40px;
         font-size: 30px;
     }
-    
+
     .usuario input {
         color: white;
         width: 100%;
@@ -183,7 +86,7 @@ body {
         background-color: #161616;
         border-radius: 9px;
     }
-    
+
     .password input {
         color: white;
         width: 100%;
@@ -194,7 +97,7 @@ body {
         background-color: #161616;
         border-radius: 9px;
     }
-    
+
     .submit input {
         font-size: 18px;
         width: 100%;
@@ -204,5 +107,110 @@ body {
         background-color: #0c6ca5;
         color: #161616;
         border: none;
-    } 
+    }
+}
+
+@media(max-width: 599px) {
+    /* Estilos para pantallas menores a 600px */
+
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: #161616;
+        height: 100vh;
+    }
+
+    .ppal {
+        height: 10vh;
+        color: #0c6ca5;
+    }
+
+    #myCanvas {
+        /* Estilos para el canvas */
+        height: 100vh;
+        width: 45vh;
+        position: absolute;
+        top: 0;
+        left: 20px;
+        z-index: -1;
+        /* Esto asegura que el canvas esté detrás de otros contenidos */
+    }
+
+    .acceso {
+        z-index: 1;
+        /* Esto asegura que el div acceso esté delante del canvas */
+    }
+
+    .IniciarSesion {
+        color: #0c6ca5;
+    }
+
+    .IniciarSesion h1 {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 40px;
+    }
+
+    .img-01 {
+        width: 150px;
+        height: 150px;
+        margin: auto;
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 110px;
+        filter: invert(31%) sepia(62%) saturate(1308%) hue-rotate(172deg) brightness(92%) contrast(93%);
+        /* Filtro para cambiar el color de la imagen */
+    }
+
+    .acceso {
+        width: 350px;
+        height: 390px;
+        background: #161616;
+        margin: auto;
+        box-shadow: 7px 13px 37px #000;
+        padding: 20px 30px;
+        border-radius: 13px;
+    }
+
+    .acceso h2 {
+        margin: 0;
+        color: #0c6ca5;
+        margin-bottom: 30px;
+        text-align: left;
+        height: 40px;
+        font-size: 30px;
+    }
+
+    .usuario input {
+        color: white;
+        width: 100%;
+        border: 1px solid #0c6ca5;
+        margin-bottom: 40px;
+        padding: 11px 10px;
+        height: 40px;
+        background-color: #161616;
+        border-radius: 9px;
+    }
+
+    .password input {
+        color: white;
+        width: 100%;
+        border: 1px solid #0c6ca5;
+        margin-bottom: 60px;
+        padding: 11px 10px;
+        height: 40px;
+        background-color: #161616;
+        border-radius: 9px;
+    }
+
+    .submit input {
+        font-size: 18px;
+        width: 100%;
+        height: 50px;
+        margin-bottom: 40px;
+        border-radius: 12px;
+        background-color: #0c6ca5;
+        color: #161616;
+        border: none;
+    }
 }

@@ -67,7 +67,7 @@
         </fieldset>
         <fieldset>
           <label for="titular-tarj">Nombre del Titular</label>
-          <input type="text" id="titular-tarj" required />
+          <input type="text" id="titular-tarj" maxlength="30" required />
         </fieldset>
         <fieldset class="fieldset-expiration">
           <label for="card-expiration-month">Fecha de Expiracion</label>
@@ -108,7 +108,7 @@
           <label for="card-cvv">CVV</label>
           <input type="text" id="card-cvv" maxlength="3" required />
         </fieldset>
-        <button class="btn" id="btn-add">Agregar</button>
+        <button class="btn" id="btn-add" type="button">Agregar</button>
       </form>
     </div>
     <script src="api-tarjeta.js"></script>

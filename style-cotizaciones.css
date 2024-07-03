@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 * {
+    /* Selecciono todo los elementos del html */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -38,6 +39,7 @@ h1 {
     width: 5vw;
     height: 8vh;
     filter: invert(24%) sepia(100%) saturate(1612%) hue-rotate(182deg) brightness(92%) contrast(91%);
+    /* Filtro para cambiar el color de la imagen */
 }
 
 .container h1 {
@@ -46,16 +48,19 @@ h1 {
 }
 
 .navbar li.selected {
+    /* Selecciono el elemento li que tenga la clase selected */
     color: #0c6ca5;
 }
 
 li.selected a {
+    /* Selecciono el elemento a que este dentro de un elemento li con la clase selected */
     color: #0c6ca5;
 
 }
 
 .navbar ul {
     list-style-type: none;
+    /* Elimina los puntos de la lista */
     background-color: #161616;
     padding: 0px;
     margin: 0px;
@@ -72,6 +77,7 @@ li.selected a {
 }
 
 .navbar a:hover {
+    /* Selecciono el elemento a que este siendo hover */
     color: #104A77;
 }
 
@@ -79,7 +85,8 @@ li.selected a {
     float: right;
 }
 
-.boxBack1{
+.boxBack1 {
+    /* Clase para el cuadro de cotizaciones */
     position: absolute;
     background-color: #FFFFFF;
     margin-left: 1vw;
@@ -91,6 +98,7 @@ li.selected a {
 }
 
 #dolar {
+    /* Clase para el cuadro de cotizaciones */
     position: relative;
     display: flex;
     flex-wrap: wrap;
@@ -131,6 +139,7 @@ li.selected a {
     font-size: 1.7vw;
     display: flex;
     justify-content: space-around;
+    /* Hace que dos elementos tengan espacio igual alrededor de ellos */
     margin-bottom: 15px;
 }
 
@@ -138,7 +147,9 @@ li.selected a {
     padding: 5px;
 }
 
-@media (max-width: 599px) { 
+@media (max-width: 599px) {
+
+    /* Media query para pantallas de 599px o menos */
     .currency-box {
         height: 120px;
         padding: 5px;
@@ -149,12 +160,15 @@ li.selected a {
         /* Ancho para 3 cuadros en una fila */
         box-shadow: 16px 16px 8px #0000008c;
     }
+
     .values {
         font-size: 1.7vmax;
         display: flex;
         justify-content: space-around;
+        /* Centra los elementos hijos horizontalmente */
         margin-bottom: 15px;
     }
+
     .currency-box h2 {
         margin-bottom: 10px;
         font-size: 15px;
